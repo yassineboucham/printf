@@ -4,7 +4,7 @@
  * @format: the format of variable
  * Return: sum of caracter printing
 */
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
 	int i = 0, j = 0, s = 0;
 
