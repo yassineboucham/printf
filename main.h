@@ -12,6 +12,6 @@ typedef struct typd
 
 	int (*f)(va_list)
 } fbyf; /* func_by_flug */
-void _preintf(char *str, ...);
+void _printf(const har *format, ...);
 
 #endif
