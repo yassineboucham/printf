@@ -6,12 +6,11 @@
 */
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0, s = 0;
+	int i = 0, s = 0, j = 0;
 
 	va_list ap;
 	fbyf type[] = {
 		{'c', _putc},
-		{'s', _printstr},
 	};
 
 	va_start(ap, format);
@@ -21,11 +20,11 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			j = 0;
-			while (j < 2)
+			while (j < 1)
 			{
-				if (type[j][0] == format[i])
+				if (type[j].c == format[i])
 				{
-					s += type[i].f(ap);
+					s += type[j].f(ap);
 					i++;
 				}
 				j++;
@@ -33,9 +32,10 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-		s += putchar(format[i]);
+		s += _putchar(format[i]);
 		}
 		i++;
 	}
+	va_end(ap);
 	return (s);
 }
