@@ -19,4 +19,5 @@ int _putstring(char *string);
 int _puts(va_list list);
 int _putc(va_list list);
 int _putchar(char c);
+int print_symbol(va_list list);
 #endif

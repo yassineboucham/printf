@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	fbyf type[] = {
 		{'c', _putc},
+		{'%', print_symbol},
 	};
 	if (format == NULL)
 	return (-1);
@@ -23,15 +24,13 @@ int _printf(const char *format, ...)
 			while (format[i] == ' ')
 			i++;
 			j = 0;
-			while (j < 1)
+			while (j < 2)
 			{
 				if (type[j].c == format[i])
 				{
 					s += type[j].f(ap);
 					i++;
 				}
-				else
-					s += _putchar('%');
 				j++;
 			}
 			i--;
