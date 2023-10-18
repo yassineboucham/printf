@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	fbyf type[] = {
 		{'c', _putc},
 		{'%', print_symbol},
+		{'\0', NULL},
 	};
 	if (format == NULL)
 	return (-1);
@@ -24,7 +25,7 @@ int _printf(const char *format, ...)
 			while (format[i] == ' ')
 			i++;
 			j = 0;
-			while (j < 2)
+			while (type[j].c != '\0')
 			{
 				if (type[j].c == format[i])
 				{
