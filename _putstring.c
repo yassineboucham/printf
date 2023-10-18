@@ -10,7 +10,7 @@ int _printstr(va_list list)
 		int i = 0;
 
 		if (va_str == NULL)
-		return (i);
+		va_str = "(null)";
 		while (va_str[i] != '\0')
 		{
 			_putchar(va_str[i]);
