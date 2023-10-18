@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	fbyf type[] = {
 		{'c', _putc},
 		{'%', print_symbol},
+		{'s', _printstr},
 		{'\0', NULL},
 	};
 	if (format == NULL)

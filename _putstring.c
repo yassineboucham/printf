@@ -1,36 +1,20 @@
 #include "main.h"
-
-
 /**
- * _stringlen - Calculate the length of a string...
- * @string: String
- *
- * Return: Length
- **/
-int _stringlen(const char *string)
+ * _printstr - print string
+ * @list: sting
+ * Return: i
+*/
+int _printstr(va_list list)
 {
-	int i;
+		char *va_str = va_arg(list, char *);
+		int i = 0;
 
-	for (i = 0; string[i] != 0; i++)
-	;
-
-	return (i);
+		if (va_str == NULL)
+		return (i);
+		while (va_str[i] != '\0')
+		{
+			_putchar(va_str[i]);
+			i++;
+		}
+		return (i);
 }
-
-/**
- * _putstring - print char.
- * @string: string.
- *
- * Return: string length.
- */
-
-int _putstring(char *string)
-{
-	int i;
-
-	for (i = 0; string[i] != '\0'; ++i)
-		_putchar(string[i]);
-
-	return (i);
-}
-
