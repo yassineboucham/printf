@@ -1,17 +1,29 @@
 #include "main.h"
 /**
 * helper - function to func
-* @n: long
+* @n: int
 * Return: cont
 */
-int helper(long n)
+int helper(int n)
 {
-	int connt = 0;
+	char INT_MIN[12] = "-2147483648";
+
+	int connt = 0, i = 0;
+
+	if (n == -2147483648)
+	{
+		while (INT_MIN[i] != '\0')
+		{
+			_putchar(INT_MIN[i]);
+			i++;
+		}
+		return (i);
+	}
 
 	if (n < 0)
 	{
 		connt += _putchar('-');
-		n = n * (-1);
+		n *= -1;
 	}
 	if (n / 10)
 	connt += helper(n / 10);
@@ -20,12 +32,13 @@ int helper(long n)
 }
 /**
 * _printnb - print number
-* @nb: va_list
+* @list: va_list
 * Return: lent
 */
-int _printnb(va_list nb)
+int _printnb(va_list list)
 {
-	long n = va_arg(nb, long);
+	int n = va_arg(list, int);
 
 return (helper(n));
 }
+

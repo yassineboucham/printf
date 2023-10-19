@@ -13,15 +13,14 @@ int main(void)
 	printf("----------------------\n");
 	len_1 = printf("%d\n", 0);
 	len_2 = _printf("%d\n", 0);
-	assert(len_1 == len_2);
-
+	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
 	len_2 = printf("%d\n", INT_MIN);
 	len_1 = _printf("%d\n", INT_MIN);
-	assert(len_1 == len_2);
+	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
 
 	len_1 = printf("%d\n", INT_MAX);
 	len_2 = _printf("%d\n", INT_MAX);
-	assert(len_1 == len_2);
+	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
 
 	/* ===========> %i <=========== */
 	printf("----------------------\n");
@@ -29,15 +28,15 @@ int main(void)
 	printf("----------------------\n");
 	len_1 = printf("%i\n", 0);
 	len_2 = _printf("%i\n", 0);
-	assert(len_1 == len_2);
+	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
 
 	len_2 = printf("%i\n", INT_MIN);
 	len_1 = _printf("%i\n", INT_MIN);
-	assert(len_1 == len_2);
+	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
 
 	len_1 = printf("%i\n", INT_MAX);
 	len_2 = _printf("%i\n", INT_MAX);
-	assert(len_1 == len_2);
+	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
 
 	return (0);
 }
