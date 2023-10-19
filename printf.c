@@ -10,11 +10,11 @@ int _printf(const char *format, ...)
 
 	va_list ap;
 	fbyf type[] = {
+		{'i', _printnb},
 		{'c', _putc},
 		{'%', print_symbol},
 		{'s', _printstr},
 		{'d', _printnb},
-		{'i', _printnb},
 		{'\0', NULL},
 	};
 	if (format == NULL)
@@ -40,9 +40,7 @@ int _printf(const char *format, ...)
 			i--;
 		}
 		else
-		{
 			s += _putchar(format[i]);
-		}
 		i++;
 	}
 	va_end(ap);

@@ -11,32 +11,10 @@ int main(void)
 	printf("----------------------\n");
 	printf("--> INT(%d) CASES <---\n");
 	printf("----------------------\n");
-	len_1 = printf("%d\n", 0);
-	len_2 = _printf("%d\n", 0);
+	len_1 = printf("%d\n", -2);
+	len_2 = _printf("%d\n", -2);
 	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
-	len_2 = printf("%d\n", INT_MIN);
-	len_1 = _printf("%d\n", INT_MIN);
-	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
-
-	len_1 = printf("%d\n", INT_MAX);
-	len_2 = _printf("%d\n", INT_MAX);
-	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
-
-	/* ===========> %i <=========== */
-	printf("----------------------\n");
-	printf("--> INT(%i) CASES <---\n");
-	printf("----------------------\n");
-	len_1 = printf("%i\n", 0);
-	len_2 = _printf("%i\n", 0);
-	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
-
-	len_2 = printf("%i\n", INT_MIN);
-	len_1 = _printf("%i\n", INT_MIN);
-	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
-
-	len_1 = printf("%i\n", INT_MAX);
-	len_2 = _printf("%i\n", INT_MAX);
-	printf ("len_1 = %d \nlen_2 = %d\n", len_1, len_2);
-
+	_printf("iddi%diddiiddi\n", 1024);
+	_printf("%di\n", 10);
 	return (0);
 }
